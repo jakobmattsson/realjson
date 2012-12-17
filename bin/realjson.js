@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 var optimist = require('optimist');
-var realjson = require('../src/realjson');
+var realjson = require('../lib/realjson');
 
 var argv = optimist
   .usage("Turns poor man's \"almost JSON\" into actual well-formatted JSON")

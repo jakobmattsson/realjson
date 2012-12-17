@@ -4,7 +4,7 @@
   "description": "Converts JSON-like data to real json",
   "author": "Jakob Mattsson <jakob.mattsson@gmail.com> (jakobmattsson.se)",
   "preferGlobal": true,
-  "main": "./src/realjson.js",
+  "main": "./lib/realjson.js",
   "bin": {
     "realjson": "./bin/realjson.js"
   },
@@ -12,6 +12,8 @@
     "node": ">= 0.8.0"
   },
   "scripts": {
+    "pretest": "coffee -co lib src",
+    "prepublish": "coffee -co lib src",
     "coverage": "jscov src .cov && SRC_DIR=.cov mocha --compilers coffee:coffee-script --reporter mocha-term-cov-reporter spec/convert.coffee",
     "test": "mocha --compilers coffee:coffee-script spec/*.coffee"
   },
