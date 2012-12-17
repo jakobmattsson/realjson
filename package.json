@@ -3,12 +3,19 @@
   "version": "0.1.0",
   "description": "Converts JSON-like data to real json",
   "author": "Jakob Mattsson <jakob.mattsson@gmail.com> (jakobmattsson.se)",
+  "preferGlobal": true,
   "main": "./src/realjson.js",
+  "bin": {
+    "realjson": "./bin/realjson.js"
+  },
   "engines": {
     "node": ">= 0.8.0"
   },
   "scripts": {
     "test": "mocha --compilers coffee:coffee-script spec/*.coffee"
+  },
+  "dependencies": {
+    "optimist": "0.3.5"
   },
   "devDependencies": {
     "bufferstream": "0.5.1",
