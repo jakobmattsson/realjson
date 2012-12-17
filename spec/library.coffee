@@ -1,6 +1,6 @@
 should = require 'should'
 bufferstream = require 'bufferstream'
-realjson = require('../src/realjson')
+realjson = require('./coverage').require('realjson')
 
 describe 'convert', ->
 

@@ -12,6 +12,7 @@
     "node": ">= 0.8.0"
   },
   "scripts": {
+    "coverage": "jscov src .cov && SRC_DIR=.cov mocha --compilers coffee:coffee-script --reporter mocha-term-cov-reporter spec/convert.coffee",
     "test": "mocha --compilers coffee:coffee-script spec/*.coffee"
   },
   "dependencies": {
@@ -21,6 +22,7 @@
     "bufferstream": "0.5.1",
     "coffee-script": "1.4.0",
     "mocha": "1.7.4",
+    "mocha-term-cov-reporter": "0.1.0",
     "should": "1.2.1"
   }
 }
