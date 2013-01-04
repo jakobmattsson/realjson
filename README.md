@@ -1,14 +1,16 @@
-RealJSON
+RealJSON [![Build Status](https://secure.travis-ci.org/jakobmattsson/realjson.png)](http://travis-ci.org/jakobmattsson/realjson)
 ========
 
-[![Build Status](https://secure.travis-ci.org/jakobmattsson/realjson.png)](http://travis-ci.org/jakobmattsson/realjson)
-
 Command-line tool for turning poor man's JSON into actual (well-formatted) JSON.
+
+
 
 Installation
 ------------
 
 `npm install -g realjson`
+
+
 
 Usage
 -----
@@ -22,6 +24,8 @@ Usage
         }
       ]
     }
+
+
 
 Why?
 ----
