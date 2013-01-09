@@ -1,6 +1,7 @@
+jscov = require 'jscov'
 should = require 'should'
 bufferstream = require 'bufferstream'
-realjson = require('./coverage').require('realjson')
+realjson = require(jscov.cover('..', 'lib', 'realjson'))
 
 describe 'convert', ->
 
