@@ -3,29 +3,32 @@
   "version": "0.1.0",
   "description": "Converts JSON-like data to real json",
   "author": "Jakob Mattsson <jakob.mattsson@gmail.com> (jakobmattsson.se)",
-  "preferGlobal": true,
   "main": "./lib/realjson.js",
   "bin": {
     "realjson": "./bin/realjson.js"
   },
   "engines": {
-    "node": ">= 0.8"
+    "node": ">= 0.8 < 0.12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jakobmattsson/realjson.git"
   },
   "scripts": {
     "pretest": "coffee -co lib src",
     "prepublish": "coffee -co lib src",
-    "coverage": "jscov src .cov && JSCOV=.cov mocha --compilers coffee:coffee-script --reporter mocha-term-cov-reporter spec/library.coffee",
-    "test": "mocha --compilers coffee:coffee-script spec/*.coffee"
+    "coverage": "jscov src .cov && JSCOV=.cov mocha --compilers coffee:coffee-script --reporter mocha-term-cov-reporter --recursive spec",
+    "test": "mocha --compilers coffee:coffee-script --recursive spec"
   },
   "dependencies": {
-    "optimist": "0.3.5"
+    "optimist": "^0.6.0"
   },
   "devDependencies": {
-    "bufferstream": "0.5.1",
-    "coffee-script": "1.4.0",
-    "jscov": "0.2.0",
-    "mocha": "1.7.4",
-    "mocha-term-cov-reporter": "0.1.0",
-    "should": "1.2.1"
+    "bufferstream": "^0.6.0",
+    "coffee-script": "^1.4.0",
+    "jscov": "^0.5.7",
+    "mocha": "^1.7.4",
+    "mocha-term-cov-reporter": "^0.1.0",
+    "should": "^1.2.1"
   }
 }
